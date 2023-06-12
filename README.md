@@ -26,8 +26,8 @@ npm start
 
 ## Contribute
 
-See [Contributing]().
+See [Contributing](/docs/contributing.md).
 
 ## Code of conduct
 
-See [Code of conduct]().
+See [Code of conduct](/docs/code-of-conduct.md).
