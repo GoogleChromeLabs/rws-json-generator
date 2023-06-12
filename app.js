@@ -15,8 +15,4 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-// start the server
-const port = 3000;
-app.listen(port, () => {
-  console.log(`Listening on port ${port}`);
-});
+module.exports = app;
