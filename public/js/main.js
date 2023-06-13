@@ -23,8 +23,8 @@ form.addEventListener('submit', (event) => {
   spinner.style.display = 'inline-block';
   setTimeout(() => {
     formHandler.submit(form);
-  }, 80);
-  spinner.style.display = 'none';
+    spinner.style.display = 'none';
+  }, 150);
 });
 
 // Add domains to subsets
