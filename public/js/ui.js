@@ -33,7 +33,12 @@ const ui = {
 
   // Generates and displays the final output based on the form's data
   showOutput(formData) {
-    const outputForCanonical = prettyPrintJson.toHtml(formData, {quoteKeys: true});
+    const outputOptions = {
+      quoteKeys: true,
+      trailingComma: false,
+      linkUrls: false,
+    };
+    const outputForCanonical = prettyPrintJson.toHtml(formData, outputOptions);
     // Output for primary .well-known
     document.getElementById(
       'primaryOutput'
@@ -68,7 +73,7 @@ const ui = {
     if (memberList !== '') {
       document.getElementById('domainsListOutput').innerHTML = memberList;
       document.getElementById('membersWellKnownOutput').innerHTML =
-        prettyPrintJson.toHtml({primary: formData.primary}, {quoteKeys: true});
+        prettyPrintJson.toHtml({primary: formData.primary}, outputOptions);
     }
     // output for GitHub submission
     document.getElementById('submissionOutput').innerHTML = outputForCanonical;
