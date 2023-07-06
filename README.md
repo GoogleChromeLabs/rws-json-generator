@@ -8,7 +8,7 @@ This tool generates the JSON resources needed to make a [Related Site Sets](http
 
 ## Live deployed version
 
-https://fps-submission-tool.ue.r.appspot.com/
+https://rss-json-generator.ue.r.appspot.com/
 
 ## Running the app locally
 
