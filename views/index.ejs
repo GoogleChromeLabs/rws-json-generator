@@ -16,15 +16,19 @@ limitations under the License. -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>First-Party Sets Submission Tool</title>
+  <title>Related Site Sets Submission Tool</title>
   <link href="/third_party/bootstrap.min.css" rel="stylesheet">
   <link href="/third_party/pretty-print-json.min.css" rel=stylesheet>
 </head>
 <body class='bg-info-subtle'>
 <div class='bg-white rounded-1 shadow p-4 my-4 mx-auto' style='width: 720px !important;'>
-  <h1 class='text-secondary fw-semibold text-center mb-4'>First-Party Sets Submission Tool</h1>
-  <p>This tool generates the JSON resources needed to make a First-Party Set submission. It <b>does not</b> perform all the required technical validations (see full requirements <a href='https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md' target='_blank'>here</a>).</p>
-  <p>Enter your First-Party Set details below:</p>
+  <h1 class='text-secondary fw-semibold text-center mb-4'>
+    Related Site Sets 
+    <br/>
+    <span class="fs-3">JSON Generator</span>
+  </h1>
+  <p>This tool generates the JSON resources needed to make a Related Site Sets submission. It <b>does not</b> perform all the required technical validations (see full requirements <a href='https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md' target='_blank'>here</a>).</p>
+  <p>Enter your Related Site Sets details below:</p>
   <form id="mainForm" action="/" method="post" novalidate>
     <!-- Contact Email -->
     <div class="mb-3 has-validation">
@@ -41,7 +45,7 @@ limitations under the License. -->
     <!-- Associated Subset -->
     <div class="mb-3 p-2" style='border: 1px dashed gray;'>
       <div class='d-flex justify-content-between'>
-        <p class='fw-semibold fs-5'>Associated Subset <span class='fw-light fs-6 text-secondary'>(max 3)</span></p>
+        <p class='fw-semibold fs-5'>Associated Subset <span class='fw-light fs-6 text-secondary'>(max 9)</span></p>
         <div>
           <button id='removeAssociate' type='button' class='btn btn-sm btn-outline-danger'>Remove</button>
           <button id='addAssociate' type='button' class='btn btn-sm btn-outline-primary'>Add</button>
@@ -74,7 +78,7 @@ limitations under the License. -->
     <!-- Form Submit -->
     <div>
       <button type='submit' class='btn btn-success w-100'>
-        Generate FPS Submission Resources
+        Generate RSS JSON Resources
         <div id='loadingSpinner' class="spinner-border spinner-border-sm" role="status" style='display: none;'>
           <span class="visually-hidden">Loading...</span>
         </div>
@@ -83,7 +87,7 @@ limitations under the License. -->
   </form>
   <!-- Output -->
   <div id='outputWrapper' class='border-top border-2 mt-4' style='display: none;'>
-    <h4 class='my-4'>Your FPS Submission Resources</h4>
+    <h4 class='my-4'>Your RSS JSON Resources</h4>
     <p>Add the <code>.well-known</code> file to the <b>primary domain</b> with the following content:</p>
     <ul>
       <li id='primaryOutput' class='font-monospace'></li>
@@ -94,7 +98,7 @@ limitations under the License. -->
     <div id='domainsListOutput'></div>
     <pre id='membersWellKnownOutput' style="background-color: ghostwhite;" class='border rounded p-3'><code></code></pre>
     <hr>
-    <p>Submit a GitHub PR with your First-Party Set to the <a href='https://github.com/GoogleChrome/first-party-sets/blob/main/first_party_sets.JSON' target='_blank'>canonical list</a> by adding the content below as a new item to the "sets" list.</p>
+    <p>Submit a GitHub PR with your Related Site Set to the <a href='https://github.com/GoogleChrome/first-party-sets/blob/main/first_party_sets.JSON' target='_blank'>canonical list</a> by adding the content below as a new item to the "sets" list.</p>
     <pre id='submissionOutput' style="background-color: ghostwhite;" class='border rounded p-3'><code></code></pre>
   </div>
 </div>

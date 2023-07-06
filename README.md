@@ -1,6 +1,6 @@
-# Related Sites Sets Submission Tool
+# Related Site Sets Submission Tool
 
-This tool generates the JSON resources needed to make a [Related Sites Sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) submission. 
+This tool generates the JSON resources needed to make a [Related Site Sets](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets/) submission. 
 
 - [Submission guidelines](https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md)
 - [Developer guide](https://developer.chrome.com/docs/privacy-sandbox/first-party-sets-integration/)

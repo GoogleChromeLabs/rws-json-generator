@@ -90,8 +90,8 @@ const ui = {
     switch (button.id) {
       case 'addAssociate':
         domainsWrapper = document.getElementById('associatedDomains');
-        if (domainsWrapper.children.length === 3) {
-          alert('You can only add a maximum of 3 associated domains');
+        if (domainsWrapper.children.length === 9) {
+          alert('You can only add a maximum of 9 associated domains');
           return;
         }
         num = domainsWrapper.children.length + 1;
@@ -106,7 +106,7 @@ const ui = {
         break;
       case 'addCountry':
         if (this.getDomainList() === '') {
-          alert('You must add domains to your FPS before adding ccTLDs');
+          alert('You must add domains to your RSS before adding ccTLDs');
           return;
         }
         domainsWrapper = document.getElementById('countryDomains');
