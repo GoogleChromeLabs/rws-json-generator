@@ -15,7 +15,7 @@
 /**
  * Module dependencies.
  */
-const debug = require('debug')('rss-json-generator:server');
+const debug = require('debug')('rws-json-generator:server');
 const http = require('http');
 const app = require('./app');
 

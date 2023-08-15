@@ -16,19 +16,19 @@ limitations under the License. -->
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Related Site Sets Submission Tool</title>
+  <title>Related Website Sets JSON Generator</title>
   <link href="/third_party/bootstrap.min.css" rel="stylesheet">
   <link href="/third_party/pretty-print-json.min.css" rel=stylesheet>
 </head>
 <body class='bg-info-subtle'>
 <div class='bg-white rounded-1 shadow p-4 my-4 mx-auto' style='width: 720px !important;'>
   <h1 class='text-secondary fw-semibold text-center mb-4'>
-    Related Site Sets 
+    Related Website Sets 
     <br/>
     <span class="fs-3">JSON Generator</span>
   </h1>
-  <p>This tool generates the JSON resources needed to make a Related Site Sets submission. It <b>does not</b> perform all the required technical validations (see full requirements <a href='https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md' target='_blank'>here</a>).</p>
-  <p>Enter your Related Site Sets details below:</p>
+  <p>This tool generates the JSON resources needed to make a Related Website Sets (RWS) submission. It <b>does not</b> perform all the required technical validations (see full requirements <a href='https://github.com/GoogleChrome/first-party-sets/blob/main/FPS-Submission_Guidelines.md' target='_blank'>here</a>).</p>
+  <p>Enter your Related Website Sets details below:</p>
   <form id="mainForm" action="/" method="post" novalidate>
     <!-- Contact Email -->
     <div class="mb-3 has-validation">
@@ -45,7 +45,21 @@ limitations under the License. -->
     <!-- Associated Subset -->
     <div class="mb-3 p-2" style='border: 1px dashed gray;'>
       <div class='d-flex justify-content-between'>
-        <p class='fw-semibold fs-5'>Associated Subset <span class='fw-light fs-6 text-secondary'>(max 9)</span></p>
+        <p class='fw-semibold fs-5'>
+          Associated Subset
+          <svg xmlns="http://www.w3.org/2000/svg" 
+               width="16" 
+               height="16" 
+               fill="currentColor" 
+               class="bi bi-info-circle"
+               style="margin-top: -0.5rem !important"
+               viewBox="0 0 16 16"
+               data-bs-toggle="tooltip" 
+               data-bs-title="Browsers may enforce a limit of Associated Domains (e.g. Chrome's limit is 5)">
+            <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+            <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+          </svg>
+        </p>
         <div>
           <button id='removeAssociate' type='button' class='btn btn-sm btn-outline-danger'>Remove</button>
           <button id='addAssociate' type='button' class='btn btn-sm btn-outline-primary'>Add</button>
@@ -102,6 +116,7 @@ limitations under the License. -->
     <pre id='submissionOutput' style="background-color: ghostwhite;" class='border rounded p-3'><code></code></pre>
   </div>
 </div>
+<script src='third_party/bootstrap.bundle.min.js'></script>
 <script src='third_party/validate.min.js'></script>
 <script src='third_party/pretty-print-json.min.js'></script>
 <script src='js/main.js' type='module' defer></script>

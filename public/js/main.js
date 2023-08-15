@@ -15,6 +15,11 @@
 import formHandler from './form.js';
 import ui from './ui.js';
 
+// Tooltips
+const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
+
+
 // Handle the form submission
 const form = document.getElementById('mainForm');
 form.addEventListener('submit', (event) => {
