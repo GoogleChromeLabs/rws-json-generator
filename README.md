@@ -8,7 +8,7 @@ This tool generates the JSON resources needed to make a [Related Website Sets](h
 
 ## Live deployed version
 
-https://rws-json-generator.ue.r.appspot.com/
+https://goo.gle/rws-json-generator
 
 ## Running the app locally
 
