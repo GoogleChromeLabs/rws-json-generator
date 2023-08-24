@@ -42,7 +42,7 @@ const ui = {
     // Output for primary .well-known
     document.getElementById(
       'primaryOutput'
-    ).innerHTML = `${formData.primary}/.well-known/related-website-set.json`;
+    ).innerHTML = `${formData.primary}/.well-known/first-party-set.json`;
     document.getElementById('primaryWellKnownOutput').innerHTML =
       outputForCanonical;
     // Output for member domains .well-known
@@ -50,14 +50,14 @@ const ui = {
     if (formData.associatedSites) {
       memberList += '<p>Associated Sites:</p><ul>';
       for (let i = 0; i < formData.associatedSites.length; i += 1) {
-        memberList += `<li class='font-monospace'>${formData.associatedSites[i]}/.well-known/related-website-set.json</li>`;
+        memberList += `<li class='font-monospace'>${formData.associatedSites[i]}/.well-known/first-party-set.json</li>`;
       }
       memberList += '</ul>';
     }
     if (formData.serviceSites) {
       memberList += '<p>Service Sites:</p><ul>';
       for (let i = 0; i < formData.serviceSites.length; i += 1) {
-        memberList += `<li class='font-monospace'>${formData.serviceSites[i]}/.well-known/related-website-set.json</li>`;
+        memberList += `<li class='font-monospace'>${formData.serviceSites[i]}/.well-known/first-party-set.json</li>`;
       }
       memberList += '</ul>';
     }
@@ -65,7 +65,7 @@ const ui = {
       memberList += '<p>ccTLDs:</p><ul>';
       Object.keys(formData.ccTLDs).forEach((key) => {
         for (let i = 0; i < formData.ccTLDs[key].length; i += 1) {
-          memberList += `<li class='font-monospace'>${formData.ccTLDs[key][i]}/.well-known/related-website-set.json</li>`;
+          memberList += `<li class='font-monospace'>${formData.ccTLDs[key][i]}/.well-known/first-party-set.json</li>`;
         }
       });
       memberList += '</ul>';
